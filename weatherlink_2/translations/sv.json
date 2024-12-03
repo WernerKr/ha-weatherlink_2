@@ -1,0 +1,508 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Enheten är redan konfigurerad"
+    },
+    "error": {
+      "cannot_connect": "Lyckades inte ansluta",
+      "invalid_auth": "Felaktiga autentiseringsuppgifter",
+      "unknown": "Oväntat fel"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "api_version": "API version"
+        },
+        "data_description": {
+          "api_version": "V1 kan användas för äldre enheter, V2 kan användas för alla enheter."
+        },
+        "description": "Välj API-version"
+      },
+      "user_1": {
+        "data": {
+          "apitoken": "API token v1",
+          "password": "Lösenord",
+          "username": "Användarnamn eller DID"
+        },
+        "data_description": {
+          "username": "Använd DID här om du har tillgång till det - dvs om det är din egen station"
+        },
+        "description": "Ange åtkomstuppgifter för ditt Weatherlink-konto"
+      },
+      "user_2": {
+        "data": {
+          "api_key_v2": "API key v2",
+          "api_secret": "API secret"
+        },
+        "description": "Ange åtkomstuppgifter för dina Weatherlink-stationer"
+      },
+      "user_3": {
+        "description": "Välj väderstation"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "timestamp": {
+        "state_attributes": {
+          "last_update": {
+            "name": "Senaste uppdatering"
+          }
+        }
+      },
+      "trans_battery": {
+        "name": "Sändarbatteri"
+      }
+    },
+    "sensor": {
+      "aqi_nowcast_val": {
+        "name": "Luftkvalitetsindex Nowcast"
+      },
+      "bar_trend": {
+        "name": "Lufttryck trend",
+        "state": {
+          "falling_rapidly": "Sjunker snabbt",
+          "falling_slowly": "Sjunker sakta",
+          "rising_rapidly": "Stiger snabbt",
+          "rising_slowly": "Stiger sakta",
+          "steady": "Stabilt"
+        }
+      },
+      "dewpoint": {
+        "name": "Daggpunkt"
+      },
+      "et_day": {
+        "name": "Evapotranspiration idag"
+      },
+      "et_month": {
+        "name": "Evapotranspiration månad"
+      },
+      "et_year": {
+        "name": "Evapotranspiration år"
+      },
+      "heat_index": {
+        "name": "Upplevd temp (TH)"
+      },
+      "hum_extra_1": {
+        "name": "Luftfuktighet extra 1"
+      },
+      "hum_extra_2": {
+        "name": "Luftfuktighet extra 2"
+      },
+      "hum_extra_3": {
+        "name": "Luftfuktighet extra 3"
+      },
+      "hum_extra_4": {
+        "name": "Luftfuktighet extra 4"
+      },
+      "hum_extra_5": {
+        "name": "Luftfuktighet extra 5"
+      },
+      "hum_extra_6": {
+        "name": "Luftfuktighet extra 6"
+      },
+      "hum_extra_7": {
+        "name": "Luftfuktighet extra 7"
+      },
+      "inside_humidity": {
+        "name": "Luftfuktighet inne"
+      },
+      "inside_temperature": {
+        "name": "Temperatur inne"
+      },
+      "moist_soil_1": {
+        "name": "Jordfuktighet 1"
+      },
+      "moist_soil_2": {
+        "name": "Jordfuktighet 2"
+      },
+      "moist_soil_3": {
+        "name": "Jordfuktighet 3"
+      },
+      "moist_soil_4": {
+        "name": "Jordfuktighet 4"
+      },
+      "outside_humidity": {
+        "name": "Luftfuktighet ute"
+      },
+      "outside_temperature": {
+        "name": "Temperatur ute"
+      },
+      "pm_10_1_hour": {
+        "name": "PM10 1h"
+      },
+      "pm_10_3_hour": {
+        "name": "PM10 3h"
+      },
+      "pm_10_24_hour": {
+        "name": "PM10 24h"
+      },
+      "pm_10_nowcast": {
+        "name": "PM10 nowcast"
+      },
+      "pm_2p5_1_hour": {
+        "name": "PM2.5 1h"
+      },
+      "pm_2p5_3_hour": {
+        "name": "PM2.5 3h"
+      },
+      "pm_2p5_24_hour": {
+        "name": "PM2.5 24h"
+      },
+      "pm_2p5_nowcast": {
+        "name": "PM2.5 nowcast"
+      },
+      "pm_pct_data": {
+        "name": "PM PCT data"
+      },
+      "pm_pct_data_1_hour": {
+        "name": "PM PCT data 1h"
+      },
+      "pm_pct_data_3_hour": {
+        "name": "PM PCT data 3h"
+      },
+      "pm_pct_data_24_hour": {
+        "name": "PM PCT data 24h"
+      },
+      "pressure": {
+        "name": "Lufttryck"
+      },
+      "rain_rate": {
+        "name": "Regnintensitet",
+        "state_attributes": {
+          "rain_rate_hi": {
+            "name": "Rain intensity hi"
+          },
+          "rain_rate_hi_last_15_min": {
+            "name": "Rain intensity 15min"
+          }
+        }
+      },
+      "rain_rate_hi": {
+        "name": "Rain intensity last 1min"
+      },
+      "rain_rate_hi_15_min": {
+        "name": "Rain intensity last 15min"
+      },
+      "rain_storm": {
+        "name": "Regnväder",
+        "state_attributes": {
+          "rain_storm_start": {
+            "name": "Regnväder började"
+          },
+          "rain_storm_last": {
+            "name": "Rain storm last"
+          },
+         "rain_storm_last_start": {
+           "name": "Rain storm last start"
+          },
+          "rain_storm_last_end": {
+            "name": "Rain storm last end"
+          }
+        }
+      },
+      "rain_storm_last": {
+        "name": "Föregående regnväder"
+      },
+      "rain_this_month": {
+        "name": "Regn denna månad"
+      },
+      "rain_this_year": {
+        "name": "Regn i år"
+      },
+      "rain_today": {
+        "name": "Regn idag",
+        "state_attributes": {
+          "rain_day_last_15_min": {
+            "name": "Rain last 15min"
+          },
+          "rain_day_last_60_min": {
+            "name": "Rain last 60min"
+          },
+          "rain_day_last_24_hr": {
+            "name": "Rain last 24h"
+          }
+        }
+      },
+      "solar_irradiance": {
+        "name": "Solinstrålning"
+      },
+      "rain_today_15_min": {
+        "name": "Rain last 15min"
+      },
+      "rain_today_60_min": {
+        "name": "Rain last 60min"
+      },
+      "rain_today_24_h": {
+        "name": "Rain last 24h"
+      },
+      "solar_panel_volt": {
+        "name": "Solpanel"
+      },
+      "supercap_volt": {
+        "name": "Superkondensator"
+      },
+      "temp_1": {
+        "name": "Temperatur 1"
+      },
+      "temp_2": {
+        "name": "Temperatur 2"
+      },
+      "temp_3": {
+        "name": "Temperatur 3"
+      },
+      "temp_4": {
+        "name": "Temperatur 4"
+      },
+      "temp_extra_1": {
+        "name": "Temp extra 1"
+      },
+      "temp_extra_2": {
+        "name": "Temp extra 2"
+      },
+      "temp_extra_3": {
+        "name": "Temp extra 3"
+      },
+      "temp_extra_4": {
+        "name": "Temp extra 4"
+      },
+      "temp_extra_5": {
+        "name": "Temp extra 5"
+      },
+      "temp_extra_6": {
+        "name": "Temp extra 6"
+      },
+      "temp_extra_7": {
+        "name": "Temp extra 7"
+      },
+      "temp_leaf_1": {
+        "name": "Bladtemperatur 1"
+      },
+      "temp_leaf_2": {
+        "name": "Bladtemperatur 2"
+      },
+      "temp_leaf_3": {
+        "name": "Bladtemperatur 3"
+      },
+      "temp_leaf_4": {
+        "name": "Bladtemperatur 4"
+      },
+      "temp_soil_1": {
+        "name": "Temp jord 1"
+      },
+      "temp_soil_2": {
+        "name": "Temp jord 2"
+      },
+      "temp_soil_3": {
+        "name": "Temp jord 3"
+      },
+      "temp_soil_4": {
+        "name": "Temp jord 4"
+      },
+      "thsw_index": {
+        "name": "Upplevd temp (THSW)"
+      },
+      "thw_index": {
+        "name": "Upplevd temp (THW)"
+      },
+      "trans_battery_volt": {
+        "name": "Sändarbatteri"
+      },
+      "uv_index": {
+        "name": "UV-index"
+      },
+      "wet_bulb": {
+        "name": "Våttemperatur"
+      },
+      "wet_leaf_1": {
+        "name": "Bladfuktighet 1"
+      },
+      "wet_leaf_2": {
+        "name": "Bladfuktighet 2"
+      },
+      "wet_leaf_3": {
+        "name": "Bladfuktighet 3"
+      },
+      "wet_leaf_4": {
+        "name": "Bladfuktighet 4"
+      },
+      "wind": {
+        "name": "Vindstyrka",
+        "state_attributes": {
+          "wind_speed_avg_last_1_min": {
+            "name": "Wind last 1min"
+          },
+          "wind_speed_avg_last_2_min": {
+            "name": "Wind last 2min"
+          },
+          "wind_speed_avg_last_10_min": {
+            "name": "Wind last 10min"
+          }
+        }
+      },
+      "wind_1_min": {
+        "name": "Wind last 1min"
+      },
+      "wind_2_min": {
+        "name": "Wind last 2min"
+      },
+      "wind_10_min": {
+        "name": "Wind last 10min"
+      },
+      "wind_chill": {
+        "name": "Temp vindeffekt"
+      },        
+      "wind_direction_deg": {
+        "name": "Vindriktning gr"
+      },
+      "wind_direction": {
+        "name": "Vindriktning",
+        "state": {
+          "e": "O",
+          "ene": "ONO",
+          "ese": "OSO",
+          "n": "N",
+          "ne": "NO",
+          "nne": "NNO",
+          "nnw": "NNV",
+          "nw": "NV",
+          "s": "S",
+          "se": "SE",
+          "sse": "SSE",
+          "ssw": "SSW",
+          "sw": "SW",
+          "w": "W",
+          "wnw": "WNW",
+          "wsw": "WSW"
+        },
+        "state_attributes": {
+          "wind_dir": {
+            "name": "Wind direction"
+          },
+          "wind_dir_scalar_avg_last_1_min": {
+            "name": "Wind dir last 1min"
+          },
+          "wind_dir_scalar_avg_last_2_min": {
+            "name": "Wind dir last 1min"
+          },
+          "wind_dir_scalar_avg_last_10_min": {
+            "name": "Wind dir last 2min"
+          }
+        }
+      },
+      "wind_gust_direction": {
+        "name": "Wind gust direction",
+        "state": {
+          "e": "O",
+          "ene": "ONO",
+          "ese": "OSO",
+          "n": "N",
+          "ne": "NO",
+          "nne": "NNO",
+          "nnw": "NNV",
+          "nw": "NV",
+          "s": "S",
+          "se": "SE",
+          "sse": "SSE",
+          "ssw": "SSW",
+          "sw": "SW",
+          "w": "W",
+          "wnw": "WNW",
+          "wsw": "WSW"
+        },
+        "state_attributes": {
+          "wind_dir_at_hi_speed_last_10_min": {
+            "name": "Wind gust direction"
+          },
+          "wind_dir_at_hi_speed_last_2_min": {
+            "name": "Wind gust dir 2min"
+          }
+        }
+      },
+      "wind_gust_direction_deg": {
+        "name": "Wind gust direction"
+      },
+      "wind_direction_1m": {
+        "name": "Wind direction last 1min"
+      },
+      "wind_direction_2m": {
+        "name": "Wind direction last 2min"
+      },
+      "wind_direction_10m": {
+        "name": "Wind direction last 10min"
+      },
+      "wind_gust_direction_2m": {
+        "name": "Wind gust direction 2min"
+      },
+      "wind_gust": {
+        "name": "Vindby",
+        "state_attributes": {
+          "wind_speed_hi_last_2_min": {
+            "name": "Wind gust last 2min"
+          }
+        }
+      },
+      "wind_gust_2_min": {
+        "name": "Wind gust last 2min"
+      },
+      "solar_energy_day": {
+        "name": "Solar energy day"
+      },
+      "heatdegree_day": {
+        "name": "Heatdegree day"
+      },
+      "cooldegree_day": {
+        "name": "Cooldegree day"
+      },
+      "heatdegreef_day": {
+        "name": "Heatdegree day °F"
+      },
+      "cooldegreef_day": {
+        "name": "Cooldegree day °F"
+      },
+      "uv_dose_day": {
+        "name": "Uv dose day"
+      },
+      "wind_run_day": {
+        "name": "Wind run day"
+      },
+      "rssi_last": {
+        "name": "Rssi last"
+      },
+      "rx_state": {
+        "name": "RX state",
+        "state": {
+          "tracking": "OK",
+          "synched": "Synched",
+          "scanning": "Scanning"
+        }
+      },
+      "freq_error_current": {
+        "name": "Freq error current"
+      },
+      "packets_missed_day": {
+        "name": "Packets missed day"
+      },
+      "packets_received_day": {
+        "name": "Packets received day"
+      },
+      "reception_day": {
+        "name": "Reception day"
+      },
+      "resyncs_day": {
+        "name": "Resyncs day"
+      },
+      "crc_errors_day": {
+        "name": "Crc errors day"
+      }
+    }
+  },
+  "selector": {
+    "set_api_ver": {
+      "options": {
+        "api_v1": "API V1",
+        "api_v2": "API V2"
+      }
+    }
+  }
+}

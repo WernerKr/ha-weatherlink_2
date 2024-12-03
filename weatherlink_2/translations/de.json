@@ -1,0 +1,559 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Gerät ist bereits konfiguriert"
+    },
+    "error": {
+      "cannot_connect": "Verbindung nicht möglich",
+      "invalid_auth": "Ungültige Authentifizierung",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "api_version": "API Version"
+        },
+        "data_description": {
+          "api_version": "V1 kann für ältere Geräte verwendet werden, V2 kann für alle Geräte verwendet werden."
+        },
+        "description": "Wählen Sie die API-Version aus"
+      },
+      "user_1": {
+        "data": {
+          "apitoken": "API-Token v1",
+          "password": "Passwort",
+          "username": "Benutzername oder DID"
+        },
+        "data_description": {
+          "username": "Verwenden Sie hier DID, wenn Sie Zugriff darauf haben – d.h. wenn es sich um Ihre eigene Station handelt"
+        },
+        "description": "Geben Sie Ihre Anmeldedaten ein, um auf Ihr Weatherlink-Konto zuzugreifen"
+      },
+      "user_2": {
+        "data": {
+          "api_key_v2": "API-Schlüssel v2",
+          "api_secret": "API-Geheimnis"
+        },
+        "description": "Geben Sie Ihre Anmeldedaten ein, um auf Ihre Weatherlink Stationen zuzugreifen"
+      },
+      "user_3": {
+        "description": "Wetterstation auswählen"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "timestamp": {
+        "state_attributes": {
+          "last_update": {
+            "name": "Letztes Update"
+          }
+        }
+      },
+      "trans_battery": {
+        "name": "Senderbatterie"
+      }
+    },
+    "sensor": {
+      "aqi_nowcast_val": {
+        "name": "Luftqualitätsindex Vorhersage"
+      },
+      "bar_trend": {
+        "name": "Luftdrucktrend",
+        "state": {
+          "falling_rapidly": "Schnell fallend",
+          "falling_slowly": "Langsam fallened",
+          "rising_rapidly": "Steigt schnell",
+          "rising_slowly": "Langsam steigend",
+          "steady": "Gleichbleibend"
+        }
+      },
+      "dewpoint": {
+        "name": "Taupunkt"
+      },
+      "et_day": {
+        "name": "Evapotranspiration Tag"
+      },
+      "et_month": {
+        "name": "Evapotranspiration Monat"
+      },
+      "et_year": {
+        "name": "Evapotranspiration Jahr"
+      },
+      "heat_index": {
+        "name": "Hitzeindex"
+      },
+      "hum_extra_1": {
+        "name": "Feuchte extra 1"
+      },
+      "hum_extra_2": {
+        "name": "Feuchte extra 2"
+      },
+      "hum_extra_3": {
+        "name": "Feuchte extra 3"
+      },
+      "hum_extra_4": {
+        "name": "Feuchte extra 4"
+      },
+      "hum_extra_5": {
+        "name": "Feuchte extra 5"
+      },
+      "hum_extra_6": {
+        "name": "Feuchte extra 6"
+      },
+      "hum_extra_7": {
+        "name": "Feuchte extra 7"
+      },
+      "inside_humidity": {
+        "name": "Innenluftfeuchte"
+      },
+      "inside_temperature": {
+        "name": "Innentemperatur"
+      },
+      "moist_soil_1": {
+        "name": "Bodenfeuchte 1"
+      },
+      "moist_soil_2": {
+        "name": "Bodenfeuchte 2"
+      },
+      "moist_soil_3": {
+        "name": "Bodenfeuchte 3"
+      },
+      "moist_soil_4": {
+        "name": "Bodenfeuchte 4"
+      },
+      "outside_humidity": {
+        "name": "Außenluftfeuchte"
+      },
+      "outside_temperature": {
+        "name": "Außentemperatur"
+      },
+      "pm_10": {
+        "name": "PM10",
+        "state_attributes": {
+          "pm_10_1_hour": {
+            "name": "PM10 1h"
+          },
+          "pm_10_3_hour": {
+            "name": "PM10 3h"
+          },
+          "pm_10_24_hour": {
+            "name": "PM10 24h"
+          },
+          "pm_10_nowcast": {
+            "name": "PM10 Vorhersage"
+          }
+        }
+      },
+      "pm_10_1_hour": {
+        "name": "PM10 1h"
+      },
+      "pm_10_3_hour": {
+        "name": "PM10 3h"
+      },
+      "pm_10_24_hour": {
+        "name": "PM10 24h"
+      },
+      "pm_10_nowcast": {
+        "name": "PM10 Vorhersage"
+      },
+      "pm_2p5": {
+        "name": "PM2.5",
+        "state_attributes": {
+          "pm_2p5_1_hour": {
+            "name": "PM2.5 1h"
+          },
+          "pm_2p5_3_hour": {
+            "name": "PM2.5 3h"
+          },
+          "pm_2p5_24_hour": {
+            "name": "PM2.5 24h"
+          },
+          "pm_2p5_nowcast": {
+            "name": "PM2.5 Vorhersage"
+          }
+        }
+      },
+      "pm_2p5_1_hour": {
+        "name": "PM2.5 1h"
+      },
+      "pm_2p5_3_hour": {
+        "name": "PM2.5 3h"
+      },
+      "pm_2p5_24_hour": {
+        "name": "PM2.5 24h"
+      },
+      "pm_2p5_nowcast": {
+        "name": "PM2.5 Vorhersage"
+      },
+      "pm_pct_data": {
+        "name": "PM PCT Daten",
+        "state_attributes": {
+          "pm_pct_data_1_hour": {
+            "name": "PM PCT Daten 1h"
+          },
+          "pm_pct_data_3_hour": {
+            "name": "PM PCT Daten 3h"
+          },
+          "pm_pct_data_24_hour": {
+            "name": "PM PCT Daten 24h"
+          },
+          "pm_pct_data_nowcast": {
+            "name": "PM PCT Daten Vorhersage"
+          }
+        }
+      },
+      "pm_pct_data_1_hour": {
+        "name": "PM PCT Daten 1h"
+      },
+      "pm_pct_data_3_hour": {
+        "name": "PM PCT Daten 3h"
+      },
+      "pm_pct_data_24_hour": {
+        "name": "PM PCT Daten 24h"
+      },
+      "pm_pct_data_nowcast": {
+        "name": "PM PCT Daten Vorhersage"
+      },
+      "pressure": {
+        "name": "Luftdruck"
+      },
+      "rain_rate": {
+        "name": "Regenintensität",
+        "state_attributes": {
+          "rain_rate_hi": {
+            "name": "Regenintensität letzte 1min"
+          },
+          "rain_rate_hi_last_15_min": {
+            "name": "Regenintensität letzte 15min"
+          }
+        }
+      },
+      "rain_rate_hi": {
+        "name": "Regenintensität letzte 1min"
+      },
+      "rain_rate_hi_15_min": {
+        "name": "Regenintensität letzte 15min"
+      },
+      "rain_storm": {
+        "name": "Regensturm",
+        "state_attributes": {
+          "rain_storm_start": {
+            "name": "Regensturm Beginn"
+          },
+          "rain_storm_last": {
+            "name": "Letzter Regensturm"
+          },
+         "rain_storm_last_start": {
+           "name": "Beginn des Regensturm"
+          },
+          "rain_storm_last_end": {
+            "name": "Ende des Regensturms"
+          }
+        }
+      },
+      "rain_storm_last": {
+        "name": "Letzter Regensturm"
+      },
+      "rain_this_month": {
+        "name": "Regen diesen Monat"
+      },
+      "rain_this_year": {
+        "name": "Regen dieses Jahr"
+      },
+      "rain_today": {
+        "name": "Regen heute",
+        "state_attributes": {
+          "rain_day_last_15_min": {
+            "name": "Regen letzte 15min"
+          },
+          "rain_day_last_60_min": {
+            "name": "Regen letzte 60min"
+          },
+          "rain_day_last_24_hr": {
+            "name": "Regen letzte 24h"
+          }
+        }
+      },
+      "solar_irradiance": {
+        "name": "Sonneneinstrahlung"
+      },
+      "rain_today_15_min": {
+        "name": "Regen letzte 15min"
+      },
+      "rain_today_60_min": {
+        "name": "Regen letzte 60min"
+      },
+      "rain_today_24_h": {
+        "name": "Regen letzte 24h"
+      },
+      "solar_panel_volt": {
+        "name": "Sonnenkollektor"
+      },
+      "supercap_volt": {
+        "name": "Superkondensator"
+      },
+      "temp_1": {
+        "name": "Temperatur 1"
+      },
+      "temp_2": {
+        "name": "Temperatur 2"
+      },
+      "temp_3": {
+        "name": "Temperatur 3"
+      },
+      "temp_4": {
+        "name": "Temperatur 4"
+      },
+      "temp_extra_1": {
+        "name": "Temp extra 1"
+      },
+      "temp_extra_2": {
+        "name": "Temp extra 2"
+      },
+      "temp_extra_3": {
+        "name": "Temp extra 3"
+      },
+      "temp_extra_4": {
+        "name": "Temp extra 4"
+      },
+      "temp_extra_5": {
+        "name": "Temp extra 5"
+      },
+      "temp_extra_6": {
+        "name": "Temp extra 6"
+      },
+      "temp_extra_7": {
+        "name": "Temp extra 7"
+      },
+      "temp_leaf_1": {
+        "name": "Blatt Temp 1"
+      },
+      "temp_leaf_2": {
+        "name": "Blatt Temp 2"
+      },
+      "temp_leaf_3": {
+        "name": "Blatt Temp 3"
+      },
+      "temp_leaf_4": {
+        "name": "Blatt Temp 4"
+      },
+      "temp_soil_1": {
+        "name": "Boden Temp 1"
+      },
+      "temp_soil_2": {
+        "name": "Boden Temp 2"
+      },
+      "temp_soil_3": {
+        "name": "Boden Temp 3"
+      },
+      "temp_soil_4": {
+        "name": "Boden Temp 4"
+      },
+      "thsw_index": {
+        "name": "THSW Index"
+      },
+      "thw_index": {
+        "name": "THW Index"
+      },
+      "trans_battery_volt": {
+        "name": "Senderbatterie"
+      },
+      "uv_index": {
+        "name": "UV Index"
+      },
+      "wet_bulb": {
+        "name": "Feuchtkugeltemperatur"
+      },
+      "wet_leaf_1": {
+        "name": "Blattfeuchte 1"
+      },
+      "wet_leaf_2": {
+        "name": "Blattfeuchte 2"
+      },
+      "wet_leaf_3": {
+        "name": "Blattfeuchte 3"
+      },
+      "wet_leaf_4": {
+        "name": "Blattfeuchte 4"
+      },
+      "wind": {
+        "name": "Wind",
+        "state_attributes": {
+          "wind_speed_avg_last_1_min": {
+            "name": "Wind letzte 1min"
+          },
+          "wind_speed_avg_last_2_min": {
+            "name": "Wind letzte 2min"
+          },
+          "wind_speed_avg_last_10_min": {
+            "name": "Wind letzte 10min"
+          }
+        }
+      },
+      "wind_1_min": {
+        "name": "Wind letzte 1min"
+      },
+      "wind_2_min": {
+        "name": "Wind letzte 2min"
+      },
+      "wind_10_min": {
+        "name": "Wind letzte 10min"
+      },
+      "wind_chill": {
+        "name": "Windchill"
+      },
+      "wind_direction_deg": {
+        "name": "Windrichtung"
+      },
+      "wind_direction": {
+        "name": "Windrichtung",
+        "state": {
+          "e": "O",
+          "ene": "ONO",
+          "ese": "OSO",
+          "n": "N",
+          "ne": "NO",
+          "nne": "NNO",
+          "nnw": "NNW",
+          "nw": "NW",
+          "s": "S",
+          "se": "SO",
+          "sse": "SSO",
+          "ssw": "SSW",
+          "sw": "SW",
+          "w": "W",
+          "wnw": "WNW",
+          "wsw": "WSW"
+        },
+        "state_attributes": {
+          "wind_dir": {
+            "name": "Windrichtung"
+          },
+          "wind_dir_scalar_avg_last_1_min": {
+            "name": "Windrichtung letzte 1min"
+          },
+          "wind_dir_scalar_avg_last_2_min": {
+            "name": "Windrichtung letzte 2min"
+          },
+          "wind_dir_scalar_avg_last_10_min": {
+            "name": "Windrichtung letzte 10min"
+          }
+        }
+      },
+      "wind_gust_direction": {
+        "name": "Windböen Richtung",
+        "state": {
+          "e": "O",
+          "ene": "ONO",
+          "ese": "OSO",
+          "n": "N",
+          "ne": "NO",
+          "nne": "NNO",
+          "nnw": "NNW",
+          "nw": "NW",
+          "s": "S",
+          "se": "SO",
+          "sse": "SSO",
+          "ssw": "SSW",
+          "sw": "SW",
+          "w": "W",
+          "wnw": "WNW",
+          "wsw": "WSW"
+        },
+        "state_attributes": {
+          "wind_dir_at_hi_speed_last_10_min": {
+            "name": "Windböen Richtung"
+          },
+          "wind_dir_at_hi_speed_last_2_min": {
+            "name": "Windböen Richtung 2min"
+          }
+        }
+      },
+      "wind_gust_direction_deg": {
+        "name": "Windböen Richtung"
+      },
+      "wind_direction_1m": {
+        "name": "Windrichtung letzte 1min"
+      },
+      "wind_direction_2m": {
+        "name": "Windrichtung letzte 2min"
+      },
+      "wind_direction_10m": {
+        "name": "Windrichtung letzte 10min"
+      },
+      "wind_gust_direction_2m": {
+        "name": "Windböen Richtung 2min"
+      },
+      "wind_gust": {
+        "name": "Windböen",
+        "state_attributes": {
+          "wind_speed_hi_last_2_min": {
+            "name": "Windböen letzte 2min"
+          }
+        }
+      },
+      "wind_gust_2_min": {
+        "name": "Windböen letzte 2min"
+      },
+      "solar_energy_day": {
+        "name": "Solar Energie Tag"
+      },
+      "heatdegree_day": {
+        "name": "Heiz-Grad-Tage"
+      },
+      "cooldegree_day": {
+        "name": "Kühl-Grad-Tage"
+      },
+      "heatdegreef_day": {
+        "name": "Heiz-Grad-Tage °F"
+      },
+      "cooldegreef_day": {
+        "name": "Kühl-Grad-Tage °F"
+      },
+      "uv_dose_day": {
+        "name": "Uv Dose Tag"
+      },
+      "wind_run_day": {
+        "name": "Windrun Tag"
+      },
+      "rssi_last": {
+        "name": "Rssi zuletzt"
+      },
+      "rx_state": {
+        "name": "Empfangsstatus",
+        "state": {
+          "tracking": "OK",
+          "synched": "Synchronisiert",
+          "scanning": "Scannen"
+        }
+      },
+      "freq_error_current": {
+        "name": "Freq Fehler aktuell"
+      },
+      "packets_missed_day": {
+        "name": "Packete verloren Tag"
+      },
+      "packets_received_day": {
+        "name": "Packete empfangen Tag"
+      },
+      "reception_day": {
+        "name": "Empfang Tag"
+      },
+      "resyncs_day": {
+        "name": "Resyncs Tag"
+      },
+      "crc_errors_day": {
+        "name": "CRC Fehler Tag"
+      }
+    }
+  },
+  "selector": {
+    "set_api_ver": {
+      "options": {
+        "api_v1": "API V1",
+        "api_v2": "API V2"
+      }
+    }
+  }
+}

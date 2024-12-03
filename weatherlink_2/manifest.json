@@ -1,0 +1,18 @@
+{
+  "domain": "weatherlink_2",
+  "name": "WeatherLink_2",
+  "codeowners": [
+    "@astrandb"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/astrandb/weatherlink",
+  "homekit": {},
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/astrandb/weatherlink/issues",
+  "requirements": [],
+  "ssdp": [],
+  "version": "2024.5.1",
+  "zeroconf": []
+}
